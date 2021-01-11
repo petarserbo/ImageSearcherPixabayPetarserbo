@@ -12,6 +12,11 @@ class ImageCell: UICollectionViewCell {
     
     @IBOutlet private weak var imageView: UIImageView!
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
+    
     func configure(with image: UIImage?) {
         imageView.image = image
     }

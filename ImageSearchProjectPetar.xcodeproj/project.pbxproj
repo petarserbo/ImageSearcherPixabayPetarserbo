@@ -14,10 +14,16 @@
 		A4AD2F2B256ECD96007F575C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AD2F29256ECD96007F575C /* LaunchScreen.storyboard */; };
 		A4AD2F38256ECE67007F575C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD2F37256ECE67007F575C /* ImageViewController.swift */; };
 		A4AD2F3F256ECEF0007F575C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD2F3E256ECEF0007F575C /* ImageCell.swift */; };
+		BF359073257E66E6000DB96D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF359072257E66E6000DB96D /* NetworkService.swift */; };
+		BF359076257E6C6F000DB96D /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF359075257E6C6F000DB96D /* SessionError.swift */; };
+		BF35907A257E8F29000DB96D /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF359079257E8F29000DB96D /* ImageInfo.swift */; };
+		BF35907D257EB0B9000DB96D /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35907C257EB0B9000DB96D /* ServerResponse.swift */; };
+		BF8327232587972B000C60DD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8327222587972B000C60DD /* DetailViewController.swift */; };
+		BFA3922F25A21B3F001C17D0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3922E25A21B3E001C17D0 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A4AD2F1B256ECD94007F575C /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AD2F1B256ECD94007F575C /* ImageSearchProjectPetar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearchProjectPetar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AD2F1E256ECD94007F575C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AD2F20256ECD94007F575C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A4AD2F25256ECD94007F575C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +32,12 @@
 		A4AD2F2C256ECD96007F575C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4AD2F37256ECE67007F575C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		A4AD2F3E256ECEF0007F575C /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		BF359072257E66E6000DB96D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BF359075257E6C6F000DB96D /* SessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionError.swift; sourceTree = "<group>"; };
+		BF359079257E8F29000DB96D /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
+		BF35907C257EB0B9000DB96D /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		BF8327222587972B000C60DD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BFA3922E25A21B3E001C17D0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +62,7 @@
 		A4AD2F1C256ECD94007F575C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4AD2F1B256ECD94007F575C /* ImageSearch.app */,
+				A4AD2F1B256ECD94007F575C /* ImageSearchProjectPetar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +70,10 @@
 		A4AD2F1D256ECD94007F575C /* ImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				BF4BEBD225910697006180D0 /* services */,
 				A4AD2F34256ECE34007F575C /* AppDelegates */,
 				A4AD2F36256ECE40007F575C /* Storyboards */,
+				BF359078257E8EC9000DB96D /* model */,
 				A4AD2F41256ECEF5007F575C /* View */,
 				A4AD2F3B256ECE6D007F575C /* Controllers */,
 				A4AD2F27256ECD96007F575C /* Assets.xcassets */,
@@ -90,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AD2F37256ECE67007F575C /* ImageViewController.swift */,
+				BF8327222587972B000C60DD /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,12 +117,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BF359078257E8EC9000DB96D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BF359075257E6C6F000DB96D /* SessionError.swift */,
+				BF359079257E8F29000DB96D /* ImageInfo.swift */,
+				BF35907C257EB0B9000DB96D /* ServerResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BF4BEBD225910697006180D0 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				BF359072257E66E6000DB96D /* NetworkService.swift */,
+				BFA3922E25A21B3E001C17D0 /* CacheManager.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A4AD2F1A256ECD94007F575C /* ImageSearch */ = {
+		A4AD2F1A256ECD94007F575C /* ImageSearchProjectPetar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4AD2F2F256ECD96007F575C /* Build configuration list for PBXNativeTarget "ImageSearch" */;
+			buildConfigurationList = A4AD2F2F256ECD96007F575C /* Build configuration list for PBXNativeTarget "ImageSearchProjectPetar" */;
 			buildPhases = (
 				A4AD2F17256ECD94007F575C /* Sources */,
 				A4AD2F18256ECD94007F575C /* Frameworks */,
@@ -117,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = ImageSearch;
+			name = ImageSearchProjectPetar;
 			productName = ImageSearch;
-			productReference = A4AD2F1B256ECD94007F575C /* ImageSearch.app */;
+			productReference = A4AD2F1B256ECD94007F575C /* ImageSearchProjectPetar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A4AD2F16256ECD94007F575C /* Build configuration list for PBXProject "ImageSearch" */;
+			buildConfigurationList = A4AD2F16256ECD94007F575C /* Build configuration list for PBXProject "ImageSearchProjectPetar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -149,7 +183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4AD2F1A256ECD94007F575C /* ImageSearch */,
+				A4AD2F1A256ECD94007F575C /* ImageSearchProjectPetar */,
 			);
 		};
 /* End PBXProject section */
@@ -172,10 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8327232587972B000C60DD /* DetailViewController.swift in Sources */,
+				BF359073257E66E6000DB96D /* NetworkService.swift in Sources */,
 				A4AD2F1F256ECD94007F575C /* AppDelegate.swift in Sources */,
 				A4AD2F3F256ECEF0007F575C /* ImageCell.swift in Sources */,
+				BF35907A257E8F29000DB96D /* ImageInfo.swift in Sources */,
 				A4AD2F38256ECE67007F575C /* ImageViewController.swift in Sources */,
+				BFA3922F25A21B3F001C17D0 /* CacheManager.swift in Sources */,
+				BF35907D257EB0B9000DB96D /* ServerResponse.swift in Sources */,
 				A4AD2F21256ECD94007F575C /* SceneDelegate.swift in Sources */,
+				BF359076257E6C6F000DB96D /* SessionError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8U99CLXJ5;
 				INFOPLIST_FILE = ImageSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8U99CLXJ5;
 				INFOPLIST_FILE = ImageSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4AD2F16256ECD94007F575C /* Build configuration list for PBXProject "ImageSearch" */ = {
+		A4AD2F16256ECD94007F575C /* Build configuration list for PBXProject "ImageSearchProjectPetar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4AD2F2D256ECD96007F575C /* Debug */,
@@ -367,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4AD2F2F256ECD96007F575C /* Build configuration list for PBXNativeTarget "ImageSearch" */ = {
+		A4AD2F2F256ECD96007F575C /* Build configuration list for PBXNativeTarget "ImageSearchProjectPetar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4AD2F30256ECD96007F575C /* Debug */,
