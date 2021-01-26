@@ -55,6 +55,10 @@ class ImageViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             switch result {
             case let .failure(error):
+                let alerController = UIAlertController(title: "Warning", message: "No internet connection", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .destructive) { _ in }
+                alerController.addAction(okAction)
+                self.present(alerController, animated: true, completion: nil)
                 print (error)
             case let .success(imagesInfo):
                 self.imageInfo = imagesInfo
